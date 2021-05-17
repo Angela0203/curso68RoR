@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!--permite visualizar caracteres "raros" como la ñ-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAGINA 1</title>
+    <style>
+        table {
+            border: 1px solid red
+        }
+    </style>
+    <script>
+        document.getElementById("name")
+    </script>
+</head>
+
+<body>
+    <div>
+        <!-- esto es un comentario -->
+        <!--Action ruta de envio; get envia por url; post envia datos ocultos-->
+        <form action="">
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name">
+            <!--el id es el identificador unico para los elementos, es como usar el rut, queda determinado para la pagina completa-->
+            <br>
+            <!--ejemplo de checkbox-->
+            <label for="verano">Verano</label>
+            <input type="checkbox" id="verano" name="estacion">
+            <label for="otoño">otoño</label>
+            <input type="checkbox" id="otoño" name="estacion">
+            <label for="invierno">Invierno</label>
+            <input type="checkbox" id="invierno" name="estacion">
+            <label for="primavera">Primavera</label>
+            <input type="checkbox" id="primavera" name="estacion">
+        </form>
+        <h1>Hola Mundo!</h1>
+        <h2>Hola Mundo!</h2>
+        <h3>Hola Mundo!</h3>
+        <h4>Hola Mundo!</h4>
+        <h5>Hola Mundo!</h5>
+        <h6>Titulo h6 </h6>
+        <br>
+        <!--es un salto de linea en la pagina-->
+        <hr>
+        <!--es una linea horizontal-->
+        <p>ddododo rerererere mimimimi fafafafa solsolsolsol lalalala siisisi dododo <br> dodododod rerererere mimimimi fafafa solsolsol lalala sisisi dododod</p>
+        <!--pre formato-->
+        <pre>
+            esta
+                sirve
+                    para 
+                        agregar un formato
+                            antes de visualizarlo en la pagina
+        <!--la plataforma esta configurada para que tenga 4 espacios,para tabular, debe ser con 4 espacios, se puede cambiar la configuracion-->
+
+
+        </pre>
+        <br>
+        <!--imagenes-->
+        <img src="Imagenes/html5.jpg" alt="código html" width="200px" height="auto">
+        <br>
+        <!--para que se vea una imagen abajo de la otra, debo agrega un br-->
+        <img src="Imagenes/maquetacion-email-html.png" alt="código html" width="200px" heigth="auto">
+        <br>
+        <img src="data:image/png;base64,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"
+            alt=css width="200px" heigth="auto">
+        <!--width es el ancho y heigth es el alto-->
+        <br>
+        <!--hipervinculos, son enlaces que no llevan a otra pagina, por ejemplo:"ingrese aqui"-->
+        <a href="http://www.facebook.com">
+            Haz clik aqui para ingresar
+        </a>
+        <br>
+        <a href="http://www.instagram.com" target="_blanc">
+            o ingresa con
+                <br>
+                    <img src="Imagenes/Instagram.jpg" alt="Instagram">
+        </a>
+
+        <!--existen dos tipos de lista ordenadas (OL) y no ordenadas (UL)-->
+        <ol>
+            <li>CSS</li>
+            <li>HTML</li>
+            <li>JavaScrip</li>
+        </ol>
+        <!--ejemplo ul-->
+        <ul>
+            <li>html</li>
+            <li>CSS</li>
+            <ul>
+                <li>opcion 1</li>
+                <li>opcion 2</li>
+                <ul>
+                    <li>opcion 1.1</li>
+                    <ul>
+                        <li>
+                            <a href="https://www.google.cl">google</a>
+                        </li>
+                    </ul>
+                </ul>
+            </ul>
+        </ul>
+        <br>
+        <!--tablas-->
+        <table>
+            <!--Encabezados-->
+            <thead>
+                <!--fila-->
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Email</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <!--elementos-->
+                    <td>1</td>
+                    <td>Alexis</td>
+                    <td>a@g.cl</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td></td>
+                    <td>b@g.cl</td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    </div>
+</body>
+
+</html>

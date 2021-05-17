@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Formulario de Registro</title>
+</head>
+
+<body>
+    <h1>Mi Formulario de Registro</h1>
+    <form action="" method="post">
+        <!-- method (metodo de envio) post envia la informacion del formulario oculta, cuando es get se hace visible en la URL-->
+        <label for="por favor complete los siguientes datos de registro">Por favor, complete los siguientes datos de registro:</label>
+        <br>
+        <br>
+        <label for="nombre">Nombre:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text" id="nombre" name="nombre">
+        <br>
+        <br>
+        <label for="apeliido">Apellido:</label>&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text" id="apeliido" name="apellido">
+        <br>
+        <br>
+        <label for="email">Email:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text" id="email" name="email">
+        <br>
+        <br>
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="pass">
+        <br>
+        <br>
+        <label for="password">Confirmar:</label>&nbsp;
+        <input type="password" id="confirmar" name="confirmar">
+        <br>
+        <br>
+        <label for="date"> Cumpleaños:</label>&nbsp;&nbsp;
+        <input type="date" id="date" name="cumpleaños">
+        <br>
+        <br>
+        <label for="hombre"> Hombre:</label>
+        <input type="radio" id="hombre" name="genero" value="hombre">
+        <label for="mujer">Mujer:</label>
+        <input type="radio" id="mujer" name="genero" value="mujer">
+        <label for="otro">Otro:</label>
+        <input type="radio" id="otro" name="genero" value="otro">
+        <br>
+        <br>
+        <label for="agrega una breve descripcion de ti">Agrega una breve descripcion de ti</label>
+        <br>
+        <br>
+        <textarea name="descripcion" rows="4" cols="30"></textarea>
+        <!--se le puede agregar un tamaño agregando rows y cols, que son filas y columnas-->
+        <br>
+        <br>
+        <label for="Lenguaje Favorito">Lenguaje Favorito:</label>
+        <select name="lenguaje">
+        <option value="JavaScript">JavaScript</option>
+        <option value="CSS">CSS</option>
+        <option value="HTML">HTML</option>
+        <!--podemos darle numeros al value, que es lo que vera el usuario-->
+        <!--se puede poner una opcion 0,para que no tenga seleccionada ninguna opcion previamente-->
+        </select>
+        <br>
+        <br>
+        <input type="submit" value="Enviar">
+        <!--cuidado con usar el type=bottom, porque no envia la informacion, es un boton "vacio" -->
+    </form>
+</body>
+
+</html>
