@@ -30,16 +30,15 @@
 }
 
 #contenido {
-    padding: 20px;
-    background-color: rgb(46, 19, 32);
-    width: 960px;
+    background: radial-gradient(rgb(178, 148, 162), rgb(46, 19, 32));
+    width: 1000px;
 }
 
 #selfie {
     display: inline-block;
     width: 405px;
     border: 5px solid gray;
-    margin-right: 10px;
+    margin: 20px 10px 0px 20px;
 }
 
 #about {
@@ -47,13 +46,13 @@
     background-color: whitesmoke;
     width: 520px;
     height: 277px;
-    margin-left: 10px;
+    margin: 20px 10px;
     vertical-align: top;
 }
 
 .titulo1 {
     color: white;
-    background-color: gray;
+    background: linear-gradient( 0deg, silver, gray, silver);
     font-size: 21px;
     padding: 10px;
 }
@@ -76,7 +75,6 @@
 #subcontenido {
     display: inline-block;
     width: 1000px;
-    margin-left: -20px;
 }
 
 .proyectos {
@@ -98,7 +96,7 @@
 
 .titulo2 {
     color: white;
-    background-color: gray;
+    background: linear-gradient( 0deg, silver, gray, silver);
     font-size: 16px;
     padding: 10px;
 }
@@ -146,6 +144,7 @@
 #pie-pagina img {
     width: 20px;
     display: inline-block;
+    vertical-align: middle;
 }
 
 #pie-pagina a {
