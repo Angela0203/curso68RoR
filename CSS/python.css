@@ -8,7 +8,7 @@
     width: 970px;
     margin: 0px auto;
     height: auto;
-    background: linear-gradient(rgb(21, 70, 111) 90%, rgb(55, 142, 229));
+    background: linear-gradient(#245176 90%, rgb(55, 142, 229));
 }
 
 img {
@@ -16,12 +16,85 @@ img {
     margin: 10px 0px 10px 30px;
 }
 
-#botones {
-    background-color: rgb(48, 128, 207);
+#encabezado {
+    font-size: 13px;
+    text-align: right;
+    width: 300px;
+    vertical-align: top;
+    margin-left: 226px;
+    margin-top: 10px;
+    display: inline-block
+}
+
+#encabezado p {
+    color: white;
+}
+
+#encabezado a {
+    color: #dec618;
+}
+
+#separador {
+    color: black;
+    margin-left: 4px;
+}
+
+#buscador {
+    background-color: #4e4c4c;
+    width: 280px;
+    height: 55px;
+    display: inline-block;
+    border-radius: 9px;
+    margin-top: 10px;
+    margin-left: 59px;
+    box-shadow: 2px 2px 2px rgb(26, 25, 25);
+}
+
+#barra {
+    margin: 12px 0px 10px 10px;
+    height: 30px;
+    width: 160px;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 10px;
+    color: gray;
+    box-shadow: 1px 1px 1px silver;
+}
+
+#boton {
+    height: 27px;
+    width: 37px;
+    border-radius: 5px;
+    background-color: #114ba1f2;
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    border-color: white;
+    margin-right: 39px;
+    display: inline-block;
+    box-shadow: 2px 2px 2px rgb(26, 25, 25);
+}
+
+#menu {
+    background: linear-gradient( rgb(27, 119, 210), rgb(67, 134, 202), rgb(27, 119, 210));
     width: 840px;
     border-radius: 5px;
     height: 45px;
     margin-left: 90px;
+    display: -webkit-inline-box;
+    list-style-type: none;
+    font-size: 18px;
+    box-shadow: 2px 2px 2px rgb(26, 25, 25);
+}
+
+#menu a {
+    color: white;
+    text-decoration: none;
+}
+
+#menu li {
+    margin: 10px 30px 10px 25px
 }
 
 #contenido {
@@ -31,7 +104,8 @@ img {
 
 #contenido ul {
     width: 200px;
-    color: yellow;
+    color: #dec618;
+    ;
     list-style-type: disclosure-closed;
     List-style-position: inside;
     margin: 30px 10px 0px 110px;
@@ -45,33 +119,29 @@ img {
     color: white;
 }
 
-#contenido p {
+#intro {
     color: white;
     font-size: 12.5px;
+    font-style: normal;
+    line-height: normal;
+}
+
+#texto {
+    color: #dec618;
+    font-size: 18px;
     text-align: center;
     vertical-align: top;
     width: 590px;
     display: inline-block;
-    margin-top: 26px;
+    margin-top: 22px;
+    font-style: oblique;
+    line-height: 30px;
 }
 
 #zen {
-    color: #dec618;
-    text-align: center;
-    font-style: oblique;
-    line-height: 30px;
-    width: 345px;
-    margin-left: 423px;
-    vertical-align: top;
-    display: inline-block;
-    margin-top: -130px
-}
-
-#zen h4 {
     font-size: 15px;
     text-align: center;
-    margin-left: 70px;
-    margin-bottom: 20px;
+    margin: 20px;
     color: white;
     font-weight: normal;
     font-style: normal;
