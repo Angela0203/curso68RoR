@@ -1,0 +1,140 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#contenedor {
+    width: 970px;
+    margin: 0px auto;
+    height: auto;
+    background: linear-gradient(rgb(21, 70, 111) 90%, rgb(55, 142, 229));
+}
+
+img {
+    width: 350px;
+    margin: 10px 0px 10px 30px;
+}
+
+#botones {
+    background-color: rgb(48, 128, 207);
+    width: 840px;
+    border-radius: 5px;
+    height: 45px;
+    margin-left: 90px;
+}
+
+#contenido {
+    width: 970px;
+    display: inline-block;
+}
+
+#contenido ul {
+    width: 200px;
+    color: yellow;
+    list-style-type: disclosure-closed;
+    List-style-position: inside;
+    margin: 30px 10px 0px 110px;
+    text-align: center;
+    line-height: 30px;
+    display: inline-block;
+    font-size: 14px;
+}
+
+#contenido a {
+    color: white;
+}
+
+#contenido p {
+    color: white;
+    font-size: 12.5px;
+    text-align: center;
+    vertical-align: top;
+    width: 590px;
+    display: inline-block;
+    margin-top: 26px;
+}
+
+#zen {
+    color: #dec618;
+    text-align: center;
+    font-style: oblique;
+    line-height: 30px;
+    width: 345px;
+    margin-left: 423px;
+    vertical-align: top;
+    display: inline-block;
+    margin-top: -130px
+}
+
+#zen h4 {
+    font-size: 15px;
+    text-align: center;
+    margin-left: 70px;
+    margin-bottom: 20px;
+    color: white;
+    font-weight: normal;
+    font-style: normal;
+}
+
+#subcontenido {
+    width: 970px;
+    background-color: white;
+    display: inline-block;
+}
+
+#subcontenido h5 {
+    font-size: 15px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+#subcontenido ::marker {
+    color: black;
+}
+
+#subcontenido ul {
+    list-style-type: square;
+}
+
+#cuadro1 {
+    margin-left: 95px;
+}
+
+.cuadros {
+    display: inline-block;
+    border-top: 5px solid rgb(55, 142, 229);
+    width: 220px;
+    margin: 10px 20px 15px 15px;
+    text-align: center;
+    font-size: 12px;
+    vertical-align: top;
+    padding-right: 130px;
+    padding-left: 40px;
+}
+
+.color {
+    color: rgb(116, 176, 236)
+}
+
+#link1 {
+    margin-left: 185px;
+}
+
+#pie-pagina {
+    padding-top: 40px;
+}
+
+.link {
+    text-decoration: none;
+    color: rgb(116, 176, 236);
+    margin-right: 40px;
+}
+
+#pie-pagina p {
+    color: rgb(116, 176, 236);
+    text-align: center;
+    margin-top: 10px;
+    padding: 5px;
+    font-size: 10px;
+}
