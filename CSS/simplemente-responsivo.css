@@ -1,0 +1,120 @@
+* {
+    font-family: sans-serif;
+}
+
+#wrapper h1 {
+    background-color: rgb(121, 120, 120);
+    padding-left: 10px;
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+
+.parrafo {
+    background-color: rgb(203, 203, 203);
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+#footer h2 {
+    background-color: rgb(245, 245, 114);
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+#footer h3 {
+    background-color: rgb(245, 245, 114);
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+#footer h4 {
+    background-color: rgb(245, 245, 114);
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+#footer span {
+    font-weight: normal;
+}
+
+@media only screen and (min-width: 1024px) {
+    #wrapper h1 {
+        height: 50px;
+        font-size: 30px;
+        font-weight: normal;
+        min-width: 1024px;
+    }
+    .parrafo {
+        font-size: 14.5px;
+        height: 105px;
+        min-width: 1024px;
+    }
+    #footer h2 {
+        height: 35px;
+        font-size: 15px;
+        min-width: 1024px;
+    }
+    #footer h3 {
+        display: none;
+    }
+    #footer h4 {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 1023px) {
+    #wrapper h1 {
+        height: 50px;
+        font-size: 30px;
+        font-weight: normal;
+        min-width: 481px;
+        max-width: 1023px;
+    }
+    .parrafo {
+        font-size: 14.5px;
+        height: 140px;
+        min-width: 481px;
+        max-width: 1023px;
+    }
+    #footer h3 {
+        height: 35px;
+        font-size: 15px;
+        min-width: 481px;
+        max-width: 1023px;
+    }
+    #footer h2 {
+        display: none;
+    }
+    #footer h4 {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    #wrapper h1 {
+        height: 50px;
+        font-size: 30px;
+        font-weight: normal;
+        max-width: 480px;
+    }
+    .parrafo {
+        font-size: 14.5px;
+        height: 200px;
+        max-width: 480px;
+    }
+    #footer h4 {
+        height: 35px;
+        font-size: 14px;
+        max-width: 480px;
+    }
+    #footer h3 {
+        display: none;
+    }
+    #footer h2 {
+        display: none;
+    }
+}

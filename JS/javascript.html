@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <script>
+        /*Ejercicios Javascript basic */
+        /* cuando son // es solo para una linea*/
+        function a() { /* solo va a retornar cuando la llamen, que es cuando se imprime*/
+            return 35;
+        }
+        console.log(a()) // console.log(35)
+            //respuesta: 35
+
+        /*Ejercicio2*/
+        function a() { /* las funciones esperan ser llamadas por console.log*/
+            return 4;
+        }
+        console.log(a() + a()); // console.log (4+4)
+        // respuesta:8
+
+        /*Ejercicio 3*/
+        function a(b) { // cuando llame esta funcion, siempre nos va a retornar b
+            return b;
+        }
+        console.log(a(2) + a(4)); //console.log (2+4)
+        //respuesta:6
+
+        /*Ejercicio 4*/
+        function a(b) { //b=3
+                
+            console.log(b); //imprimir en seguida el valor de b
+            return b * 3; //retorna el valor de bx3
+        }
+        console.log(a(3)); //el 3 es un parametro o argumento-- ahora al retornar, va imprimir 9
+        //respuesta: 3,9
+
+        /*Ejercicio 5*/
+        function a(b) { //b=10
+            return b * 4; // bx4= 40-- el retorno nos saca inmediatamente y se imprime, una vez que se ejecuta el retorno, no se peude entrar nuevamente a menos que se llame.
+            console.log(b); // nunca se va a ejecutar, porque el retorno se ejecuta inmediatamente
+        }
+        console.log(a(10)); // console.log(40)
+        //respuesta:40
+
+        /*Ejercicio 6*/
+        function a(b) { //b=15
+            if (b < 10) { // es b menor que 10= NO
+                return 2;
+            }    
+            else { // entonces se activa el else= 4
+                return 4;
+            }
+            console.log(b); // nunca se va a ejecutar, porque "manda el retorno"
+        }
+        console.log(a(15)); //esta parte es el llamado a la funcion 
+        //respuesta:4
+
+        /*Ejercicio 7*/
+        function a(b, c) { //3,10
+            return b * c; // 10x3=30
+        }
+        console.log(10, 3); // imprimiendo directo, porque no se llama la funcion a
+        console.log(a(3, 10));
+        //respuesta:10,3,30
+
+        /*Ejercicio 8*/
+        function a(b) {
+            for (var i = 0; i < 10; i++) {
+                console.log(i);
+            }
+            return i;
+        }
+        console.log(3);
+        console.log(4); // no llamaron a la funcion, se imprimen los valores tal cual.
+        //respuesta: 3,4
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
