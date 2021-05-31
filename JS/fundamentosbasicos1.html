@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios Basicos</title>
+    <script>
+        /*Ejercicio 1*/
+        function del1Al255() { // no hay limitacion de palabras y numeras, pero siempre la primera palabra en minuscula, la segunda 1° letra en mayuscula y despues lo que quiera
+            var array = [];
+            //todos los arreglos comienzan de la posicion 0
+            // x.length (tamaño o cantidad de elementos)
+            // x.pop() y x.push(?);x[x.length-1] (ultimo elemento del array)
+            for (var i = 1; i < 256; i++) { // i parte del 1 porque eso me estan pidiendo,e incluye el 255 asi que igual se puede escribir el <=
+                array.push(i);
+            }
+            return array; // cuando ya no cumple con el for, retornamos el arreglo, que en este caso es array
+        }
+        console.log("resultado ejercicio 1:" + del1Al255());
+    </script>
+</head>
+
+<body>
+    <div>
+        <h1>Ejercicios basicos</h1>
+        <ol>
+            <li><b>Obtén del 1 al 255</b> Escribe una funcion que devuelve el array con todos los numeros del 1 al 255</li>
+        </ol>
+    </div>
+</body>
+
+</html>
