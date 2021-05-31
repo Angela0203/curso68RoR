@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archivo de Prueba</title>
+    <style>
+        https: //codeshare.io/
+        ul {
+            /* Quitamos los marcadores (marker) */
+            list-style: none;
+        }
+        /* contenido antes elemento del li */
+        
+        li::before {
+            /* Insertamos » */
+            content: "»";
+            /* espacio entre el marker y el li */
+            padding-right: 8px;
+            color: yellow;
+            /* Coloreamos la viñeta */
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li>menu 1</li>
+            <li>menu 1</li>
+            <li>menu 1</li>
+            <li>menu 1</li>
+            <li>menu 1</li>
+        </ul>
+    </div>
+</body>
+
+</html>
