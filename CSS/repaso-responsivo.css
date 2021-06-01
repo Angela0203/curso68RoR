@@ -1,41 +1,42 @@
 /*CSS reset settings here*/
 
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0%;
+    padding: 0%;
 }
 
 #wrapper {
     /* va ser el 90% de 1024 */
-    width: 950px;
+    width: 90%;
     background-color: silver;
     margin: 0px auto;
 }
 
 #header {
-    min-height: 150px;
+    width: 90%;
+    min-height: 30%;
     /* como no le asigne el ancho, es auto, osea yo uso el "100%" del contenedor-- es el 100% del 90% */
     background-color: green;
 }
 
 #navigation {
     /* va ser alrededor de 25% del 90% por ejemplo*/
-    min-height: 300px;
-    width: 200px;
+    min-height: 45%;
+    width: 30%;
     background-color: blue;
 }
 
 #main_content {
     /*seria un 75% mas o menos del 90%*/
-    min-height: 400px;
-    width: 700px;
+    min-height: 45%;
+    width: 75%;
     background-color: red;
 }
 
 .subcontents {
     /* 27% por los espacios del 100% el rojo*/
-    min-height: 200px;
-    width: 210px;
+    min-height: 20%;
+    width: 27%;
     background-color: yellow;
 }
 

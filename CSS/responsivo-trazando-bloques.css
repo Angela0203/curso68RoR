@@ -1,129 +1,100 @@
-* {
-    margin: 0px;
-    padding: 0px;
-}
-
-@media only screen and (min-width: 1024px) {
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+    
     #wrapper {
-        width: 950px;
         background-color: silver;
+        width: 93%;
         margin: 0px auto;
         padding: 20px;
     }
+    
     #header {
-        min-height: 150px;
         background-color: green;
+        min-height: 150px;
     }
+    
     #navigation {
-        min-height: 300px;
-        width: 200px;
         background-color: blue;
-        display: inline-block;
-        margin-top: 20px;
-        margin-right: 10px;
     }
+    
     #main_content {
-        min-height: 400px;
-        width: 686px;
         background-color: red;
-        display: inline-block;
         margin-top: 20px;
-        margin-left: 10px;
-        vertical-align: top;
         padding: 20px;
     }
+    
     .subcontents {
-        min-height: 200px;
-        width: 210px;
         background-color: yellow;
-        display: inline-block;
-        margin-bottom: 10px;
-        margin-right: 10px;
-    }
-    #advertisement {
-        min-height: 120px;
-        width: 660px;
-        background-color: purple;
-        margin-top: 15px;
-    }
-}
-
-@media only screen and (min-width: 481px) and (max-width: 1023px) {
-    #wrapper {
-        width: 950px;
-        background-color: silver;
-        margin: 0px auto;
-        padding: 20px;
-    }
-    #header {
-        min-height: 150px;
-        background-color: green;
-    }
-    #navigation {
-        display: none;
-    }
-    #main_content {
-        min-height: 400px;
-        width: 686px;
-        background-color: red;
-        display: inline-block;
-        margin-top: 20px;
-        margin-left: 10px;
-        vertical-align: top;
-        padding: 20px;
-    }
-    .subcontents {
         min-height: 200px;
-        width: 210px;
-        background-color: yellow;
-        display: inline-block;
-        margin-bottom: 10px;
-        margin-right: 10px;
     }
+    
     #advertisement {
-        min-height: 120px;
-        width: 660px;
         background-color: purple;
-        margin-top: 15px;
-    }
-}
-
-@media only screen and (max-width: 480px) {
-    #wrapper {
-        width: 950px;
-        background-color: silver;
-        margin: 0px auto;
-        padding: 20px;
-    }
-    #header {
-        min-height: 150px;
-        background-color: green;
-    }
-    #navigation {
-        display: none;
-    }
-    #main_content {
-        min-height: 400px;
-        width: 686px;
-        background-color: red;
-        display: inline-block;
-        margin-top: 20px;
-        margin-left: 10px;
-        vertical-align: top;
-        padding: 20px;
-    }
-    .subcontents {
-        min-height: 200px;
-        width: 210px;
-        background-color: yellow;
-        display: inline-block;
-        margin-bottom: 10px;
-        margin-right: 10px;
-    }
-    #advertisement {
         min-height: 120px;
-        width: 660px;
-        background-color: purple;
-        margin-top: 15px;
     }
-}
+    
+    @media only screen and (min-width: 1024px) {
+        #navigation {
+            min-height: 300px;
+            width: 21%;
+            display: inline-block;
+            margin-top: 20px;
+            margin-right: 1.2%;
+        }
+        #main_content {
+            min-height: 400px;
+            width: 72%;
+            display: inline-block;
+            margin-left: 10px;
+            vertical-align: top;
+        }
+        .subcontents {
+            width: 30.5%;
+            display: inline-block;
+            margin: 1.2%;
+        }
+        #advertisement {
+            min-height: 120px;
+            width: 98%;
+            margin-top: 15px;
+            margin-left: 8px;
+        }
+    }
+    
+    @media only screen and (min-width: 481px) and (max-width: 1023px) {
+        #navigation {
+            display: none;
+        }
+        #main_content {
+            min-height: 400px;
+            width: 93.5%;
+            display: inline-block;
+        }
+        .subcontents {
+            width: 46.5%;
+            display: inline-block;
+            margin: 0% 2% 3% 1%;
+        }
+        #advertisement {
+            width: 100%;
+            margin-top: 15px;
+        }
+    }
+    
+    @media only screen and (max-width: 480px) {
+        #navigation {
+            display: none;
+        }
+        /*los elementos que contienen al main- content le dan el tamaño*/
+        .subcontents {
+            width: 100%;
+            margin-bottom: 5%;
+            margin-top: 2%;
+        }
+        #advertisement {
+            width: 100%;
+            margin-top: 10%;
+        }
+    }
