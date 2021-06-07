@@ -81,6 +81,65 @@
         b = multiply(2, 3); //b=undefined (porque no le retorno nada)
         console.log(b);
         //respuesta:2,3 (por el console log)---
+
+        /*Ejercicio 9*/
+        function multiply(x, y) { //x=2; y=3
+            return x * y; // return b=6
+        }
+        b = multiply(2, 3); //b=6
+        console.log(b);
+        console.log(multiply(5, 2)); //console.log(10)
+        //respuesta:6,10
+
+        /*Ejercicio 10*/
+        var x = [1, 2, 3, 4, 5, 10]; //es un arreglo, tiene 6 elementos
+        //x.lenngth=6; x[0](todos parten de la posicion 0); el ultimo elemento es x[x.length-1]=10
+        for (var i = 0; i < 5; i++) { //i=0>3>4(se incrementa en uno)>7>8
+            i = i + 3; // sobre escribimos i, i=3, i=7
+            console.log(i);
+        } //se ejecuta el for "sin llamada", porque el proceso de ejecucion es lineal, de arriba a abajo se ejecutan las funciones
+        //respuesta:3,7
+
+        /*Ejercicio 11*/
+        var x = 15; // declaracion de una variable, var deberia usarse solo para las variables globales
+        console.log(x); // impresion de la variable
+
+        function awesome() { // no se ejecuta antes del llamado y no tiene un for 
+            var x = 10; // nueva variable, le ponen x solo para confundir, y esta variable muere dentro de la funcion, algunos dicen que deberian llamarse let.
+            console.log(x);
+        }
+        console.log(x);
+        awesome(); // primero se describe la funcion y luego se llama, como una buena practica, ya que puede llamarse a la funcion y que no exista aun en esa parte del codigo
+        console.log(x);
+        //Respuesta= 15, 15, 10, 15 (porque el 10 esta dentro de awesome)
+
+        /*Ejercicio 12*/
+        for (var i = 0; i < 15; i += 2) { //i=0>2>4>6>8>10>12>14>16
+            // i+=2 => i= i+2; cuando diga ++i, primero incrementa y luego sigue
+            console.log(i);
+        }
+        //respuesta:0,2,4,6,8,10,12,14
+
+        /*Ejercicio 13*/
+        for (var i = 0; i < 3; i++) { //i=0>1>2>3
+            for (var j = 0; j < 2; j++) { //j=0se tiene que ejecutar primero esta instruccion para luego continuar con el for principal, si se vuelve a entrar, se recetea el for 
+                console.log(i * j);
+            }
+        }
+        //Respuesta:0,0,0,1,0,2
+
+        /*Ejercicio 14*/
+        function looping(x, y) {
+            for (var i = 0; i < x; i++) {
+                for (var j = 0; j < x; j++) {
+
+                    console.log(i * j);
+                }
+            }
+        }
+        z = looping(3, 3);
+        console.log(z);
+        //Respuesta:
     </script>
 </head>
 
