@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmos III</title>
+    <script>
+        /* Ejercicio 1*/
+        function a(x, y) {
+            return 5;
+        }
+        console.log(a(5, 5));
+        //respuesta:5, undefined (se ejecuta el return, pero el console.log no porque la funcion no fue llamada)
+
+        /*Ejercicio 2*/
+        function a(x, y) {
+            let z = []; //z.length= 0 let es una variable que muere dentro de la funcion, siempre el z.length va ser igual a mayor a 0
+            z.push(x); //agrega x
+            z.push(y); // agrega y
+            z.push(5); // agrega 5
+            console.log(z); // un agreglo es un conjunto de datos separados por comas, ordenados segun su ingreso
+            return z;
+        }
+        b = a(2, 2); // sobreescritura o asignacion de valor
+        console.log(b); // aca se va el retorno o regreso, (va donde fue llamada la funcion)
+        console.log(a(6, 8));
+        //respuesta: [2,2,5], [2,2,5], [6,8,5],[6,8,5] ???
+
+        /*Ejercicio 2.1*/
+        //ultimo= arreglo [arreglo.length-1]
+        function alumnoAlAzar(arreglo) {
+            var posicion = Math.floor(Math.random() * arreglo.length); //0-(arreglo.length-1)31 //0-30 (nunca me va dar el el numero entero que ponga)
+            // Math. floor me entrega la parte entera 
+            var apellido = arreglo[posicion];
+            console.log("*** La o El elegido es:" + apellido)
+        }
+        var alumnos = ["Inzunza", "Vennik", "Salazar", "Hoyuela", "LDG", "Herrera", "Morales", "Lopez", "Fuente", "Palma", "Saldivia", "Toledo", "Reyes", "Gomez", "Ojeda", "Troncoso", "Fabres", "Cayupi", "Henriquez"];
+        alumnoAlAzar(alumnos);
+
+        /*Ejercicio 3*/
+        function a(x) {
+            z = [];
+            z.push(x);
+            z.pop();
+            z.push(x);
+            z.push(x);
+            return z; // retorno [2,2];
+        }
+        y = a(2); // y=[2,2](aqui retorna!! donde se llamo la funcion)
+        y.push(5);
+        console.log(y);
+        //respuesta:[2,2,5]
+
+        /*Ejercicio 4*/
+        function a(x) {
+            if (x[0] < x[1]) {
+                return true; // no es la palabra porque las palabras van entre comillas, esta es una variable boleana
+            } else {
+                return false;
+            }
+        }
+        b = a([2, 3, 4, 5]) // sobreescritura de la fx, llama a la funcion a y es un arreglo.
+        console.log(b);
+        //respuesta:true, indeterminado;
+
+        /*Ejercicio 5*/
+        function a(x) { // x= ["Coding","Coding", "Coding","Coding"]; x.length=4
+            for (var i = 0; i < x.length; i++); { //i=0
+                if (x[i] > 0) { //1>0
+                    x[i] = "Coding";
+                }    
+            }    
+            return x; //["Coding","Coding", "Coding","Coding"]
+        }
+        console.log(a([1, 2, 3, 4]))
+            //respuesta:["Coding","Coding", "Coding","Coding"]
+
+        /*Ejercicio 6*/
+        function a(x) { //x=[5, "Coding", "Dojo", 4]; x.length=4
+            for (var i = 0; i < x.length; i++) { //i=0
+                if (x[i] > 5) { //x[0]=5> 5
+                    x[i] = "Coding";
+                } else if (x[i] < 0) { //
+                    x[i] = "Dojo";
+                }    
+            }    
+            return x; //return [5, "Coding", "Dojo", 4];
+        }
+        console.log(a([5, 7, -1, 4])) //console.log ([5, "Coding", "Dojo", 4])
+            //Respuesta:[5, "Coding", "Dojo", 4];
+
+        /*Ejercicio 7*/
+        function a(x) { //x=[5,10]
+            if (x[0] > x[1]) {
+                return x[1];
+            }
+            return 10;
+        }
+        b = a([5, 10]) //b=10
+        console.log(b);
+        //Respuesta:10
+
+        /*Ejercicio 8*/
+        function sum(x) {
+            sum = 0;
+            for (var i = 0; i < x.length; i++) {
+                sum = sum + x[i];
+                console.log(sum);
+            }
+            return sum;
+        }
+        //Respuesta:no llaman a la funcion.
+
+        /*Ejercicio 9 (parte 2)*/
+        //obtener el promedio de los numeros en el arreglo
+        function printAverage(x) { // x=[1, 2, 3]
+            sum = 0;
+            for (let i = 0; i < x.length; i++) { //para acceder uno a uno de los elementos, usar for
+                sum = sum + x[i]; //con esta instruccion estamos sumando todos los elementos
+            }
+            /*var promedio = sum / x.length;
+            return promedio;*/
+            return sum / x.length;
+        }
+
+        function printAverage(x) { //[2,5,8]
+            sum = 0;
+            for (let i = 0; i < x.length; i++) {
+                sum = sum + (x[i] / 2);
+            }
+            return sum;
+        }
+
+        y = printAverage([1, 2, 3]);
+        console.log(y); // should log 2
+
+        y = printAverage([2, 5, 8]);
+        console.log(y); // should log 5
+
+        /*Ejercicio 10*/
+        //Crea un array con todos los enteros impares (odd integers) 
+        //entre 1 y 255 (inclusive)
+        function returnOddArray() {
+            var array = [];
+            for (let i = 1; i <= 255; i += 2) {
+                array.push(i);
+            }
+            return array;
+        }
+        y = returnOddArray();
+        console.log(y); // should log [1,3,5,...,253,255]
+
+        /*Ejercicio 11*/
+        //Cuadra (eleva al cuadrado) cada valor con un array dado,
+        // obteniendo el mismo array con valores cambiados (con cada elemento al cuadrado)
+        function squareValue(x) { //x=[1, 2, 3]
+            for (let i = 0; i < x.length; i++) { //es la estructura para recorrer cualquier arreglo desde la posicion 0 hasta la ultima
+                x[i] = x[i] * x[i] //
+            }
+
+            return x;
+        }
+        y = squareValue([1, 2, 3]);
+        console.log(y); // should log [1,4,9]
+
+        y = squareValue([2, 5, 8]);
+        console.log(y); // should log [4,25,64]
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
