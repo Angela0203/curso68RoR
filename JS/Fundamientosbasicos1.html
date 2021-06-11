@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos basicos 1</title>
+    <script>
+        /*Ejercicio 1*/
+        /*Obtén del 1 al 255: 
+        Escribe una función que devuelve un array con todos los números del 1 al 255*/
+        function del1Al255() { // no hay limitacion de palabras y numeras, pero siempre la primera palabra en minuscula, la segunda 1° letra en mayuscula y despues lo que quiera
+            var array = [];
+            //todos los arreglos comienzan de la posicion 0
+            // x.length (tamaño o cantidad de elementos)
+            // x.pop() y x.push(?);x[x.length-1] (ultimo elemento del array)
+            for (var i = 1; i < 256; i++) { // i parte del 1 porque eso me estan pidiendo,e incluye el 255 asi que igual se puede escribir el <=
+                array.push(i);
+            }
+            return array; // cuando ya no cumple con el for, retornamos el arreglo, que en este caso es array
+        }
+        console.log("resultado ejercicio 1: " + del1Al255());
+
+
+        /*Ejercicio 2*/
+        /*Consigue pares hasta 1000: Escribe una función que entregue la suma de todos los números pares del 1 al 1000 
+        - Puedes usar un operador de módulo para este ejercicio.*/
+        function paresHastaMil() {
+            var sumaTotal = 0;
+            for (var i = 1; i <= 1000; i++) {
+                if (i % 2 == 0) {
+                    // 5/2=2 (resto 1), -7/2=3 (resto -1)
+                    // 50/2=25(resto 0), -40/2= -20 (resto 0)
+                    //console.log("es par");
+                    sumaTotal = sumaTotal + i;
+                }
+            }
+            return sumaTotal;
+        }
+        console.log("resultado 2: " + paresHastaMil());
+
+        /*Ejercicio 3*/
+        /*Suma impares hasta 5000: Escribe una función que devuelva la suma de todos los números impares
+        entre 1 y 5000 (ej: 1+3+5+...+4997+4999).*/
+        function sumaImpares() {
+            var sumaImpares = 0;
+            //variable = variable + algo (acumular)
+            for (var i = 1; i <= 5000; i++) {
+                if (i % 2 != 0) { //numero impares, positivos o negativos
+                    sumaImpares = sumaImpares + i;
+                }
+            }
+            return sumaImpares;
+        }
+        var resultado3 = sumaImpares();
+        console.log("resultado 3: " + resultado3);
+
+        /*Ejercicio 4*/
+        /*Itera un array: Escribe una función que devuelva la suma de todos los valores dentro de un array 
+        (ej:  [1,2,5] retorna 8. [-5,2,5,12] retorna 14). */
+        function iteraUnArray(array) {
+            //array.length -> tamaño del arreglo (3)
+            //array[array.length-1] (posicion 2), [1,2,5] 
+            var sumaArray = 0;
+            //for(var i = 0;i <= array.length-1 ;i++){
+            for (var i = 0; i < array.length; i++) { //i es utilizado para la posicion
+                sumaArray = sumaArray + array[i]; //array[i] ->obtener el elemento por posicion, dentro del arreglo
+            }
+            return sumaArray;
+        }
+
+        console.log("resultado 4.1: " + iteraUnArray([1, 2, 5]));
+        console.log("resultado 4.2: " + iteraUnArray([-5, 2, 5, 12]));
+
+        /*Ejercicio 5*/
+        /*Encuentra el mayor (max): Dado un array con múltiples valores, 
+        escribe una función que devuelva el número mayor (ej: para [-3,3,5,7] el número mayor (max) es 7).  */
+        function encuentraElMayor(array) {
+            var numeroMayor = array[0]; //se inicializa para comparar el primer elemento del array
+            for (var i = 0; i < array.length; i++) {
+                if (numeroMayor < array[i]) { //si se cumple la condicion
+                    numeroMayor = array[i]; // se reemplaza el valor 
+                }
+            }
+
+            return numeroMayor;
+        }
+        console.log(encuentraElMayor([-3, -1, -5]));
+        console.log(encuentraElMayor([-3, 3, 5, 7]));
+
+        /*Ejercicio 6*/
+        /*Encuentra el promedio (avg): Dado un array con múltiples valores, 
+        escribe una función que devuelva el promedio de los valores (ej: para [1,3,5,7,20] el promedio es 7.2).  */
+
+        /*Ejercicio 7*/
+        /*Array de impares: Escribe una función que devuelva un array de todos los números impares 
+        entre 1 y 50 (ej: [1,3,5, …, 47,49]). Pista: Usa el método ‘push’.  */
+
+        /*Ejercicio 8*/
+        /*Mayor que Y: Dado un valor Y, escribe una función que toma un array y devuelve los valores mayores que Y. 
+        Por ejemplo, si arr = [1,3,5,7] y Y = 3, tu función devolverá 2 (hay 2 números en el array mayores que 3, esto son 5 y 7).   */
+
+        /*Ejercicio 9*/
+        /*Cuadrados: Dado un array con múltiples valores, escribe una función que reemplace 
+        cada valor por el cuadrado del mismo valor (ej: [1,5,10,-2] será [1,25,100,4]).*/
+
+        /*Ejercicio 10*/
+        /*Negativos: Dado un array con múltiples valores, escribe una función que reemplace cualquier número negativo dentro del array por 0.
+        Cuando el programa esté listo, el array no debiera contener números negativos (ej: [1,5,10,-2] se convertirá en [1,5,10,0]).*/
+
+        /*Ejercicio 11*/
+        /*Max/Min/Avg: Dado un array con múltiples valores, escribe una función que devuelva un nuevo array que solo contenga 
+        el valor mayor (max), menor (min) y promedio (avg) del array original (ej: [1,5,10,-2] devolverá [10,-2,3.5]).*/
+
+        /*Ejercicio 12*/
+        /*Intercambia Valores: Escribe una función que intercambie el primer y el último valor de cualquier array.
+         La extensión mínima predeterminada del array es 2 (ej: [1,5,10,-2] será [-2,5,10,1]). */
+
+        /*Ejercicio 13*/
+        /*De Número a String: Escribe una función que tome un array de números y reemplace cualquier valor negativo por el string ‘Dojo’. 
+        Por ejemplo, dado el array = [-1,-3,2], tu función devolverá [‘Dojo’,‘Dojo’,2].*/
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
