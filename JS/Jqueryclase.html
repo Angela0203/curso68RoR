@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejerccicios Jquery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+        //agregamos una biblioteca de Jquery a nuestro codigo
+    </script>
+    <script>
+        $(document).ready(function() { //importante agregar esta etiqueta para que funcine Jquery y no olvidar llave de cierre. 
+            // etiqueta--siempre agregar el signo dollar.
+            //trabajar con etiqueta, es generico, se aplica a todas las etiquetas.
+            $('button').click(function() { //primero signo dollar, parentesis,nombre etiqueta, funcion(en este caso click),luego se escribe function(){}
+                console.log("Estoy en Jquery desde Button");
+                alert("Estoy en Jquery desde Button");
+            });
+            $('input').click(function() { // se llaman listener, porque siempre esta a la espera de ser llamada.
+                console.log("Estoy en Jquery desde input");
+                alert("Estoy en Jquery desde input");
+            });
+            //funcionalidad por clase(.)
+            //se ejecuta para cualquier elemento que posea la clase.
+            $('.input2').click(function() { // las comillas pueden ser simples o dobles,pero se recomiendan las simples para no confundirse con html.
+                console.log("Estoy en Jquery desde input");
+                alert("Estoy en Jquery desde input por clase");
+            });
+            //funcionalidad por id(#)
+            //solo para el elemento para el id (unico para ese elemento)
+            $('#input3').click(function() { // las comillas pueden ser simples o dobles,pero se recomiendan las simples para no confundirse con html.
+                console.log("Estoy en Jquery desde input");
+                alert("Estoy en Jquery desde input por id"); //ventana de alerta
+            });
+            //fin Jquery
+        });
+    </script>
+</head>
+
+<body>
+    <div>
+        <button>Jquery</button>
+        <input type="button" value="boton1">
+        <input type="button" value="boton2" class="input2">
+        <input type="button" value="boton3" id="input3">
+        <p class="input2">esto es un parrafo</p>
+    </div>
+</body>
+
+</html>

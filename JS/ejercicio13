@@ -1,0 +1,29 @@
+      /*Ejercicio 13.*/
+        /*Cambiar hacia el centro -  Dado un array, cambia el primer y último valor, el tercero con el ante penúltimo, etc.
+         Ejemplo: cambiaHaciaElCentro([true, 42, “Ada”, 2, “pizza”]) cambia el array a [“pizza¨, 42, “Ada”, 2, true]. 
+        cambiaHaciaElCentro([1,2,3,4,5,6]) cambia el array a [6,2,4,3,5,1]. No es necesario devolver (return) el array esta vez.*/
+        function cambiaHaciaElCentro(array) {
+            var primer = [];
+            var tercero = [];
+            primer = array[array.length - 1];
+            array[array.length - 1] = array[0];
+            array[0] = primer;
+            tercero = array[array.length / 2];
+            array[array.length / 2] = array[(array.length / 2) - 1];
+            array[(array.length / 2) - 1] = tercero;
+
+
+            return array
+        }
+        console.log(cambiaHaciaElCentro([1, 2, 3, 4, 5, 6]));
+
+        //opcion 2//
+        function cambiaHaciaElCentro(array) {
+            for (var i = 0; i < array.length / 2; i += 2) {
+                var temp = array[i];
+                array[i] = array[array.length - 1 - i];
+                array[array.length - 1 - i] = temp;
+            }
+            return array;
+        }
+        console.log(cambiaHaciaElCentro([1, 2, 3, 4, 5, 6])); //cambia el array a [6,2,4,3,5,1
