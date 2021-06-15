@@ -43,33 +43,124 @@
         /*Imprime (print) uno, devuelve (return) otro- Crea una función para un array de números.
         La función debería imprimir (print) el penúltimo valor y devolver (return) el primer valor impar..*/
 
+        function imprimeUnoDevuelveOtro(array) {
+            for (i = 0; i < array.length; i++) {
+                if (array[i] % 2 != 0) {
+                    console.log(array[array.length - 2]);
+                    return array[i];
+                }
+            }
+        }
+        imprimeUnoDevuelveOtro([1, 4, 3, 2, 5, 8])
+
         /*Ejercicio 4*/
         /*Doble Visión - Dado un array, crea una función que devuelva un nuevo array donde cada valor se duplique. 
         Entonces, doble([1,2,3]) debiera devolver [2, 4, 6] sin cambiar el array original. */
+
+        function dobleVision(array) {
+            var nuevoArray = [];
+            for (i = 0; i < array.length; i++) {
+                array[i] = array[i] * 2;
+                nuevoArray.push(array[i]);
+            }
+            return nuevoArray
+        }
+        console.log(dobleVision([1, 2, 3]));
+
 
         /*Ejercicio 5*/
         /*Contar Positivos -  Dado un array de números, crea una función para reemplazar el último valor con el número de valores positivos encontrados en el array. 
         Ejemplo, contarPositivos([-1,1,1,1]) cambia el array original y devuelve [-1,1,1,3]. */
 
+        function contarPositivos(array) {
+            var sumaPositivos = 0;
+            for (i = 0; i < array.length; i++) {
+                if (array[i] > 0) {
+                    sumaPositivos = sumaPositivos + array[i];
+                }
+            }
+            array[array.length - 1] = sumaPositivos;
+            return array;
+        }
+        contarPositivos([-1, 1, 1, 1]);
+
         /*Ejercicio 6*/
         /*Pares e Impares - Crea una función que acepte un array. Cada vez que ese array tenga 3 valores impares seguidos, imprime (print) 
         “¡Qué imparcial!”, y cada vez que tenga 3 pares seguidos, imprime (print) “¡Es para bien!” */
+        function paresEImpares(array) {
+            var pares = 0;
+            var impares = 0;
+            for (var i = 0; i < array.length; i++) {
+                if (array[i] % 2 == 1) {
+                    impares++;
+                    pares = 0;
+                } else {
+                    pares++;
+                    impares = 0;
+                }
+                if (impares == 3) {
+                    console.log("¡Qué imparcial!");
+                    impares = 0;
+                } else if (pares == 3) {
+                    console.log("¡Es para bien!");
+                    pares = 0;
+                }
+            }
+        }
+        paresEImpares([2, 2, 2, 7, 7, 7, 10, 10, 10, 3, 3, 3]);
 
         /*Ejercicio 7*/
         /*Incrementa los Segundos - Dado un array de números llamado arr, suma 1 a los elementos, 
         específicamente a aquellos cuyo índice es impar (arr[1], arr[3], arr[5], etc). Luego, imprime (console.log) cada valor del array y devuelve el arreglo arr.   */
 
+        function incrementaSegundo(arr) {
+
+            for (var i = 0; i < arr.length; i++) {
+                if (i % 2 != 0) {
+                    arr[i] = arr[i] + 1;
+                }
+                console.log(i + arr[i]);
+            }
+            return arr;
+        }
+        console.log(incrementaSegundo([-2, 3, 5, -5]));
+
         /*Ejercicio 8*/
         /*Longitudes previas - Pasado un array (similar a decir ‘tomado un array’ o ‘dado un array’) que contiene strings, reemplaza cada string con un número de acuerdo cantidad de letras (longitud) del string anterior. 
         Por ejemplo, longitudesPrevias([“programar”,“dojo”, “genial”]) debería devolver [“programar”,9, 4]. Pista: ¿For loops solo puede ir hacia adelante?*/
+
+        function longitudesPrevias(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                array[i] = array[i - 1].length;
+            }
+            return array;
+        }
+        console.log(longitudesPrevias(["programar", "dojo", "genial"]));
 
         /*Ejercicio 9*/
         /*Agrega Siete - Construye una función que acepte un array. Devuelve un nuevo array con todos los valores del original, pero sumando 7 a cada uno. No alteres el array original.
          Por ejemplo, agregaSiete([1,2,3) debería devolver [8,9,10] en un nuevo array. */
 
+        function agregaSiete(array) {
+            var nuevoArray = [];
+            for (let i = 0; i < array.length; i++) {
+                array[i] = array[i] + 7;
+                nuevoArray.push(array[i]);
+            }
+            return nuevoArray;
+        }
+        console.log(agregaSiete([1, 2, 3]));
+
         /*Ejercicio 10*/
         /*Array Inverso - Dado un array, escribe una función que invierte sus valores en el lugar. Ejemplo: invertir([3,1,6,4,2)) devuelve el mismo array pero con sus valores al revés, es decir [2,4,6,1,3].
         Haz esto sin crear un array temporal vacío. (Pista: necesitarás intercambiar (swap) valores).*/
+
+        function arrayInverso(array) {
+            for (let i = array.length - 1; i >= 0; i--) {
+                console.log(array[i]);
+            }
+        }
+        arrayInverso([3, 1, 6, 4, 2]);
 
         /*Ejercicio 11*/
         /*Perspectiva: Negativa - Dado un array crear y devuelve uno nuevo que contenga todos los valores del array original, 

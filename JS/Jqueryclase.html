@@ -17,23 +17,42 @@
                 console.log("Estoy en Jquery desde Button");
                 alert("Estoy en Jquery desde Button");
             });
-            $('input').click(function() { // se llaman listener, porque siempre esta a la espera de ser llamada.
+            /*$('input').click(function() { // se llaman listener, porque siempre esta a la espera de ser llamada.
+                console.log("Estoy en Jquery desde input");
+                alert("Estoy en Jquery desde input");
+            });*/
+
+            //funcionalidad por clase(.)
+            //se ejecuta para cualquier elemento que posea la clase.
+            /*$('.input2').click(function() { // las comillas pueden ser simples o dobles,pero se recomiendan las simples para no confundirse con html.
+                console.log("Estoy en Jquery desde input");
+                alert("Estoy en Jquery desde input por clase");
+            });*/
+
+            // etiqueta + la clase
+            // somos especificos para un tipo de elemento y su clase.
+            $('input.input2').click(function() { // se llaman listener, porque siempre esta a la espera de ser llamada.
                 console.log("Estoy en Jquery desde input");
                 alert("Estoy en Jquery desde input");
             });
-            //funcionalidad por clase(.)
-            //se ejecuta para cualquier elemento que posea la clase.
-            $('.input2').click(function() { // las comillas pueden ser simples o dobles,pero se recomiendan las simples para no confundirse con html.
-                console.log("Estoy en Jquery desde input");
-                alert("Estoy en Jquery desde input por clase");
-            });
+
             //funcionalidad por id(#)
             //solo para el elemento para el id (unico para ese elemento)
             $('#input3').click(function() { // las comillas pueden ser simples o dobles,pero se recomiendan las simples para no confundirse con html.
                 console.log("Estoy en Jquery desde input");
                 alert("Estoy en Jquery desde input por id"); //ventana de alerta
             });
-            //fin Jquery
+
+            /*Ejercicio de JQuery*/
+            var indice = 0;
+            $('#input4').click(function() {
+                    console.log($('#parrafo').text())); $('#parrafo').text("Esto es texto modificado JQ")
+            });
+        /*var array = ["texto1", "texto2", "texto3", "texto4"]
+        $('#parrafo').text(array[indice]);
+        indice++;*/
+
+        //fin Jquery
         });
     </script>
 </head>
@@ -44,7 +63,8 @@
         <input type="button" value="boton1">
         <input type="button" value="boton2" class="input2">
         <input type="button" value="boton3" id="input3">
-        <p class="input2">esto es un parrafo</p>
+        <input type="button" value="cambiar parrafo" id="input4">
+        <p id="parrafo">estop es un parrafoxxx</p>
     </div>
 </body>
 
