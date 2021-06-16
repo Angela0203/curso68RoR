@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base JQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('img').click(function() {
+                $(this).hide(2000);
+            });
+            $('button').click(function() {
+                $('img').show(2000);
+            });
+            // fin JQuery;
+        });
+    </script>
+    <style>
+        * {
+            font-family: sans-serif;
+        }
+        
+        img {
+            width: 250px;
+            display: inline-block;
+            border: 1px solid black;
+        }
+        
+        button {
+            background-color: green;
+            color: white;
+            font-weight: bold;
+            box-shadow: 3px 1px 1px 3px black;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>JQuery-Tarea 1</h1>
+        <img src="Imagenes/ninja1.jpg" alt="Ninja 1">
+        <img src="Imagenes/ninja2.jpg" alt="Ninja 2">
+        <img src="Imagenes/ninja3.jpg" alt="Ninja 3">
+        <img src="Imagenes/ninja4.jpg" alt="Ninja 4">
+        <img src="Imagenes/ninja5.jpg" alt="Ninja 5">
+        <img src="Imagenes/ninja6.jpg" alt="Ninja 6">
+        <img src="Imagenes/ninja7.jpg" alt="Ninja 7">
+        <img src="Imagenes/ninja8.jpg" alt="Ninja 8">
+        <br>
+        <br>
+        <button> Restaurar</button>
+    </div>
+</body>
+
+</html>
