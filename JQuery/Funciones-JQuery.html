@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base JQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            //$('').accion(function(){});
+            //click
+            $('#boton1').click(function() {
+                console.log('funcion clic');
+                alert('asi funciona click');
+            });
+            //Hide
+            $('#boton2').click(function() {
+                $('#parrafo2').hide();
+            });
+            //Show
+            $('#boton3').click(function() {
+                $('#parrafo2').show();
+            });
+            //Toggle
+            $('#boton4').click(function() {
+                $('#parrafo2').toggle();
+            });
+            //slideUp, se le puede asignar velocidad, ademas de otras caracteristicas.
+            $('#boton5').click(function() {
+                $('#parrafo3').slideUp(1000);
+            });
+            //slideDown
+            $('#boton6').click(function() {
+                $('#parrafo3').slideDown('slow');
+            });
+            //slideToggle
+            $('#boton7').click(function() {
+                $('#parrafo3').slideToggle();
+            });
+            //Fade In
+            $('#boton8').click(function() {
+                $('#parrafo4').fadeOut(5000);
+            });
+            //Fade Out
+            $('#boton9').click(function() {
+                $('#parrafo4').fadeIn(5000);
+            });
+            //Fade Toggle
+            $('#boton10').click(function() {
+                $('#parrafo4').fadeToggle();
+            });
+            //Add Class
+            $('#boton11').click(function() {
+                $('#parrafo5').addClass("ejaddclass");
+            });
+            //Add Class
+            $('#boton111').click(function() {
+                $('#parrafo5').removeClass("ejaddclass");
+            });
+            // Before--- si se le agrega el id o class, no usar comillas.
+            $('#boton12').click(function() {
+                $('#parrafo6').before('<p>agrega codigo html de manera dinamica <b>antes</b> del elemento inicial</p>');
+            });
+            //After--- si se le agrega el id o class, no usar comillas.
+            $('#boton13').click(function() {
+                $('#parrafo6').after('<p>agrega codigo html de manera dinamica <b>despues</b> del elemento inicial</p>');
+            });
+            // Prepend
+            $('#boton14').click(function() {
+                $('#parrafo7').prepend('<p>texto añadido <b>al incio</b> del elemento inicial</p>');
+            });
+            //Apprend
+            $('#boton15').click(function() {
+                $('#parrafo7').append('<p>texto añadido <b>al final</b> del elemento inicial</p>');
+            });
+            //Html asigna
+            $('#boton16').click(function() {
+                $('p').html("Hola a todos!!");
+            });
+            //Html obtiene
+            $('#boton17').click(function() {
+                $('p').html();
+                alert($('p').html());
+            });
+            //Attr
+            $('#boton18').click(function() {
+                $('#parrafo8').attr({
+                    'style': 'color:red'
+                });
+            });
+            //Attr
+            $('#boton19').click(function() {
+                $('#parrafo8').removeAttr(
+                    'style');
+            });
+            //Val Estable
+            $('#boton20').click(function() {
+                $('#nombre').val('Angela');
+                $('#apellido').val('Saldivia');
+            });
+            //Val devuelve
+            $('#boton21').click(function() {
+                $('p').val();
+                alert($('input:text').val());
+            });
+            //text estable
+            $('#boton22').click(function() {
+                $('p').text("Hola a todos!!");
+            });
+            //tect devuelve
+            $('#boton23').click(function() {
+                $('p').text();
+                alert($('p').text());
+            });
+            // fin JQuery;
+        });
+    </script>
+    <style>
+        * {
+            text-align: center;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        
+        .ejaddclass {
+            background-color: coral;
+            border: 1px solid crimson;
+            font-family: cursive;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Funcion Click</h1>
+        <p>Clickea el boton para ejecutar el evento click</p>
+        <button id="boton1">Funcion Click</button>
+        <hr>
+        <!--linea divisoria-->
+        <h1>Funcion Hide, Show y Toggle</h1>
+        <p id="parrafo2">Clickea el boton para ejecutar el evento Hide o Show o Toggle</p>
+        <button id="boton2">Funcion Hide</button>
+        <button id="boton3">Funcion Show</button>
+        <button id="boton4">Funcion Toggle</button>
+        <hr>
+        <h1>Funcion Slide Up, Slide slideDown y Slide Toggle</h1>
+        <p id="parrafo3">Desliza hacia arriba o hacia abajo, para ocultar o mostrar elementos</p>
+        <button id="boton5">Funcion Slide Up</button>
+        <button id="boton6">Funcion Slide Down</button>
+        <button id="boton7">Funcion Slide Toggle</button>
+        <!--Alternacia entre el Slide up y Slidre Down-->
+        <hr>
+        <h1>Funcion Fade In, Fade Out y Fade Toggle</h1>
+        <p id="parrafo4">Desvanece o Reaparece (disminuyendo o aumentando opcacidad)de un elemento</p>
+        <button id="boton8">Funcion Fade In</button>
+        <button id="boton9">Funcion Fade Out</button>
+        <button id="boton10">Funcion Fade Toggle</button>
+        <hr>
+        <h1>Funcion Add Class</h1>
+        <p id="parrafo5">Agrega una clase dinamicamente al elemento seleccionado.</p>
+        <button id="boton11">Funcion Add Class</button>
+        <button id="boton111">Funcion Remove Class</button>
+        <hr>
+        <h1>Funcion After y Before</h1>
+        <p id="parrafo6">Clickea el boton para ejecutar el evento click</p>
+        <button id="boton12">Funcion Before</button>
+        <button id="boton13">Funcion After</button>
+        <hr>
+        <h1>Funcion Prepend y Append</h1>
+        <p id="parrafo7"> Agregar contenido antes o despues dentro de los elementos seleccionados (util en listas).</p>
+        <button id="boton14">Funcion Prepend</button>
+        <button id="boton15">Funcion Append</button>
+        <hr>
+        <h1>Funcion Html</h1>
+        <p>Permite obtener codigo html o sobrescribirlo.</p>
+        <p>Obtiene o devuelve el contenido del primer elemento coincidente</p>
+        <p>Al asignar contenido, sobrescribe el contenido de todos los elementos coincidentes</p>
+        <button id="boton16">Funcion Html "asigna"</button>
+        <button id="boton17">Funcion Html "obtine"</button>
+        <hr>
+        <h1>Funcion Attr</h1>
+        <p id="parrafo8">Establece o devuelve atributos y valores de los elementos seleccionados.</p>
+        <button id="boton18">Funcion Attr</button>
+        <button id="boton19">Funcion Remove Attr</button>
+        <hr>
+        <h1>Funcion Val</h1>
+        <p>Devuelve o establece el atributo de valor de los elementos seleccionados(se usa principalmente en formularios html).</p>
+        <br>
+        <label for="nombre">Nombre:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text" id="nombre" name="nombre">
+        <br>
+        <br>
+        <label for="apeliido">Apellido:</label>&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text" id="apeliido" name="apellido">
+        <br>
+        <br>
+        <button id="boton20">Funcion Val establecer atributo</button>
+        <button id="boton21">Funcion Val devolver</button>
+        <!--<p>Establece el valor del atributo de valor para TODOS los elementos coincidentes.</p>
+        <p>Devuelve el valor del atributo de valor del PRIMER elemento coincidente.</p>-->
+        <hr>
+        <h1>Funcion text</h1>
+        <p>Establece o devuelve el contenido de texto de los elementos seleccionados.</p>
+        <p>Obtiene o devuelve el texto de todos los elementos coincidentes</p>
+        <p>Al asignar contenido, sobrescribe el contenido de todos los elementos coincidentes</p>
+        <button id="boton22">Funcion text "asigna"</button>
+        <button id="boton23">Funcion text "devuelve"</button>
+    </div>
+</body>
+
+</html>
