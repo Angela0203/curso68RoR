@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reforzamiento JQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            //apprend()-->agregar contenido dentro del elemento.
+            //html()--> reemplaza todo el contenido-
+            //elemento-- img, input, p, h, etc son etiquetas
+            //atributo-- id, valur, attr, html, etc
+            // estilos-- colores, tamaños, etc.
+            //$('#container').html('<p> esti es un parrafo </p>');
+            $('#container').append('<p> esti es un parrafo 1 </p>');
+            $('#container').append('<p> esti es un parrafo 2</p>');
+            $('#container').append('<p id="unico">esto es un parrafo 3</p>');
+            $('#container').append('<p> esti es un parrafo 4</p>');
+            $('#container').append('<p> esti es un parrafo 5</p>');
+            // atrr()--> agrega atributos al elemento (no todos los elementos tienen los mismos atributos)
+            //puedo revisar los atributos al posicionarme en un elemento y presionar control + espacio.
+            $('#container').attr('name', 'principal');
+            console.log($('#container').atrr('class'));
+
+            //tres formas de capturar un evento(accion) en un elemento.
+            //etiqueta, class, id
+            $('p').click(function() {
+                //$(this),identifica sobre cual etiqueta se gatilla la accion
+                $(this).text(); //text(), obtengo el contenido dentro de la etiqueta.
+                console.log('Hola clase', $(this).text());
+                $(this).atrr('name', 'adry');
+                $(this).css('color', 'blue');
+            });
+            //a traves del id, solo lo afecta a el 
+            $('#unico').click(function() {
+                //$(this).css('color', 'blue');
+                $('#unico').css('color', 'blue');
+            });
+
+
+            // fin JQuery;
+        });
+    </script>
+    <style>
+        p {
+            color: blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container" class="miclase">
+        <p>esto es un parrafo 0</p>
+
+    </div>
+</body>
+
+</html>

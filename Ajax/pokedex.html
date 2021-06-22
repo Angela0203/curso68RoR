@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pokedex::</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            //carga dinamica de las imagenes
+            for (let i = 1; i <= 898; i++) {
+                $('#container').append('<img id="' + i + '"src="http://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + i + '.png">')
+            }; //el ejercicio pide aregar un id, puede hacerse con append o concatenando i,que es lo que haremos.
+            //capturar el click en alguna imagenes
+            $('img').click(function() {
+                var id = $(this).attr('id'); //obtenemos el valor del id, el this no permite decir que al pinchar esa imagen, sepamos el id de esa imagen.
+
+                $.get("https://pokeapi.co/api/v2/pokemon/" + id + "/", function(respuesta) {
+                    console.dir(respuesta);
+
+                    //desplegar en modal a traves de css
+                    $('#miModal').addClass('miModaltarget');
+
+                    //mostrar en modal 
+                    $('.modalcontenido').html('<h1>' + respuesta.name + '</h1>');
+                    $('.modalcontenido').append('<img src="' + respuesta.sprites.front_default + '" alt="">');
+                    $('.modalcontenido').append('<h2>Type: </h2>');
+                    $('.modalcontenido').append('<h3>' + respuesta.types[0].type.name + '</h3>');
+                    $('.modalcontenido').append('<br>');
+                    $('.modalcontenido').append('<h2>Height: </h2>');
+                    $('.modalcontenido').append('<h3>' + respuesta.height + '</h3>');
+                    $('.modalcontenido').append('<br>');
+                    $('.modalcontenido').append('<h2>Weigth: </h2>');
+                    $('.modalcontenido').append('<h3>' + respuesta.weight + '</h3>');
+
+                }, "json");
+
+            });
+
+            //capturamos el click em el elemento
+            $('#cerrar').click(function() {
+
+                $('#miModal').removeClass('miModaltarget');
+            });
+
+
+
+        });
+    </script>
+    <style>
+        #container {
+            background: linear-gradient(rgb(26, 3, 43), rgb(20, 104, 132), rgb(103, 204, 238), rgb(20, 104, 132), rgb(26, 3, 43));
+            padding: 4.5%;
+        }
+        
+        img {
+            background: linear-gradient( cornflowerblue, white, rgb(241, 164, 76));
+            margin: 1%;
+        }
+        
+        #cerrar {
+            background-color: rgb(13 103 24);
+            margin-left: 92%;
+            margin-top: 1%;
+            color: blanchedalmond;
+        }
+        
+        .modal-contenido {
+            background: linear-gradient(rgb(23, 140, 23)35%, rgb(20, 104, 132), rgb(26, 3, 43));
+            width: 250px;
+            padding: 10px 20px;
+            margin: 2% auto;
+            position: relative;
+            color: blanchedalmond;
+            font-family: sans-serif;
+            border-radius: 7%;
+            border: 15px solid blanchedalmond;
+        }
+        
+        .modal-contenido h1 {
+            text-transform: capitalize;
+            color: rgb(251, 239, 0);
+            text-align: center;
+        }
+        
+        .modal-contenido img {
+            border-radius: 10%;
+            border: 4px solid white;
+            display: block;
+            margin-bottom: 30px;
+            margin-left: 70px;
+            text-align: center;
+        }
+        
+        .modal-contenido h2 {
+            font-size: 20px;
+            text-decoration: underline;
+            display: inline;
+            line-height: 40px;
+            margin-right: 35px;
+            margin-left: 55px;
+        }
+        
+        .modal-contenido h3 {
+            font-size: 20px;
+            display: inline;
+            line-height: 40px;
+        }
+        
+        .modal {
+            background-color: rgba(0, 0, 0, .8);
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 1s;
+        }
+        
+        #miModal:target {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        
+        .miModaltarget {
+            opacity: 1;
+            pointer-events: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="miModal" class="modal">
+            <div class="modal-contenido">
+                <button id="cerrar">X</button>
+                <div class="modalcontenido"> </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
