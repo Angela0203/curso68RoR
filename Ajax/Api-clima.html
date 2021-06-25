@@ -9,11 +9,32 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
         $(document).ready(function() {
+            /*$('#container').append('<label for="ciudad">Ciudad:</label>');
+            $('#container').append('<input type="text" id="ciudad" name="Ciudad">');
+            $('#container').append('<button>Consultar</button>');*/
+            $('button').click(function() { // primero determinar la funcion del boton.
+                //segundo paso, capturar el valor que ingresa el usuario; eso se puede hacer con un .val.
+                // el .val se puede usar sobretodo los elementos en  los que se pueden ingresar informacion (haciendo control+ espacio puedo ver las fx que me permite usar ese elemento).
+                var ciudad = $('#ciudad').val(); //obtener el valor del input o guardar un valor (en este caso me obtiene el nombre de la ciudad, y/o lo que escribe el usuario )
+                console.log(ciudad); // solo para confirmar o ver que se obtiene el resultado.
+                //dato extra= negocio se le dice a la operatoria.
+                //paso 3,llamar a la api.
+                // tambien puedo crear una variale url, que sea igual al la pagina de la Api que voy a usar, y en el get solo la nombro como url(ver ejemplo del profe).
+                $.get("http:api.openweathermap.org/data/2.5/weather?q=" + ciudad + "&appid=f84c36e31fea65d97f8f8f36b7eb15a0", function(objeto) { //siempre devuelve objeto.-puedo crear una variable para mi apikey o apiid, concatenando ese dato
+                    console.log(objeto);
+
+                    $('#respuesta').html(''); //me limpia el contenido(sobreescribe sobre el otro), borra contenido anterior.
+                    $('#respuesta').append('<h2>Ciudad: ' + objeto.name + ' clima actual' + '->' + objeto.weather[0].description + '</h2>');
+                    $('#respuesta').append('<p>Temperatura:' + objeto.main.temp + '</p>'); //Math.round(temperatura - 273.15);
+                    $('#respuesta').append('<p>Coordenada Latitud:' + objeto.coord.lat + '</p>');
+                    $('#respuesta').append('<p>Coordenada Longitud ' + objeto.coord.lon + '</p>');
+                }, 'json'); // formato de retorno, el objeto en formato json
+            });
+            $('#ciudad').val(''); // me sirve para limpiar el input, porque le da un dato vacio.
+
             $('form').submit(function() {
-                // your code here (build up your url)
-                $.get(url, function(res) {
-                    // your code here
-                }, 'json');
+
+
                 // don't forget to return false so the page doesn't refresh
                 return false;
             });
@@ -24,8 +45,20 @@
 
 <body>
     <div id="container">
+        <label for="ciudad">Ciudad:</label>
+        <input type="text" id="ciudad" name="Ciudad">
+        <button>Consultar</button>
+        <div id="respuesta">
+
+            <!--pensar en todo lo que devuelvo como un bloque, y luego lo agrego dinamicamente-->
+            <!--<h2>Ciudad:</h2>
+            <p>Temperatura:</p>
+            <p>Coordenada Latitud:</p>
+            <p>Coordenada Longitud </p>-->
+        </div>
 
     </div>
+
 </body>
 
 </html>
