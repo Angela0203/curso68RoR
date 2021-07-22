@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Calle:</strong>
+  <%= @direccion.calle %>
+</p>
+
+<p>
+  <strong>Ciudad:</strong>
+  <%= @direccion.ciudad %>
+</p>
+
+<p>
+  <strong>Estado:</strong>
+  <%= @direccion.estado %>
+</p>
+
+<p>
+  <strong>Usuario:</strong>
+  <%= @direccion.usuario_id %>
+  <% @usuarios.each do |usuario| %>
+    <% if usuario.id == @direccion.usuario_id %>
+      <%= usuario.nombre %>
+    <% end %>
+  <% end %>
+</p>
+
+<%= link_to 'Editar', edit_direccion_path(@direccion) %> |
+<%= link_to 'Atras', direccions_path %>
