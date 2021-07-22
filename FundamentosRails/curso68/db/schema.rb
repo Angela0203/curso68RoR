@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2021_07_21_193020) do
+=======
+ActiveRecord::Schema.define(version: 2021_07_21_210240) do
+>>>>>>> f201a5d3f6b8a4187a0778375f13a6a45ae81782
 
   create_table "articulos", force: :cascade do |t|
     t.string "nombre"
@@ -48,6 +52,15 @@ ActiveRecord::Schema.define(version: 2021_07_21_193020) do
     t.index ["usuario_id"], name: "index_mensajes_on_usuario_id"
   end
 
+<<<<<<< HEAD
+=======
+  create_table "productos", force: :cascade do |t|
+    t.string "nombre"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+>>>>>>> f201a5d3f6b8a4187a0778375f13a6a45ae81782
   create_table "rols", force: :cascade do |t|
     t.string "nombre"
     t.datetime "created_at", precision: 6, null: false
