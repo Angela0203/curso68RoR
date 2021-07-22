@@ -217,5 +217,15 @@ puts a
 end   
 
 #Números a cadenas
-#Escriba un programa que tome un arreglo de números y reemplace cualquier número negativo con la palabra "Dojo". Por ejemplo, dado el arreglo x = [-1, -3, 2], después que el programa haya terminado, ese arreglo debe ser ['Dojo', 'Dojo', 2].
+#Escriba un programa que tome un arreglo de números y 
+#reemplace cualquier número negativo con la palabra "Dojo". 
+#Por ejemplo, dado el arreglo x = [-1, -3, 2], después que el programa haya terminado, ese arreglo debe ser ['Dojo', 'Dojo', 2].
 
+
+arreglo = [-1, -3, 2]
+arreglo.each_with_index do |elemento,indice|
+    if elemento < 0
+        arreglo[indice]='Dojo'
+    end
+end
+puts arreglo.to_s

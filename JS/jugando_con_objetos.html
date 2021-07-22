@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios Basicos</title>
+    <script>
+        //Jugando con Objetos
+        var usuarios = [{
+            name: "Michael",
+            age: 37
+        }, {
+            name: "John",
+            age: 30
+        }, {
+            name: "David",
+            age: 27
+        }];
+
+        //¿Cómo harías print/log de la edad de John?-->
+        function edad(name) {
+            for (var i = 0; i < usuarios.length; i++) {
+                if (usuarios[i].name == name) {
+                    console.log(usuarios[i].age);
+                }
+            }
+        }
+
+        edad("John");
+
+        //¿Cómo harías print/log del nombre del primer objeto?-->
+        console.log(usuarios[0].name)
+            //¿Cómo harías print/log del nombre y la edad de cada usuario utilizando un for loop? -->
+        for (var i = 0; i < usuarios.length; i++) {
+            console.log(usuarios[i].name + " - " + usuarios[i].age);
+        }
+        //¿Cómo harías para imprimir el nombre de los mayores de edad?-->
+        function mayoresDeEdad(x) {
+            for (var i = 0; i < usuarios.length; i++) {
+                if (usuarios[i].age >= x) {
+                    console.log(usuarios[i].name);
+                }
+            }
+        }
+
+        mayoresDeEdad(18);
+    </script>
+</head>
+
+<body>
+    <div>
+        <h1>Jugando con Objetos</h1>
+        <ol>
+            <li><b>¿Cómo harías print/log de la edad de John?</li>
+            <li><b>Cómo harías print/log del nombre del primer objeto? </li>
+            <li><b>¿Cómo harías print/log del nombre y la edad de cada usuario utilizando un for loop?</li>
+            <li><b>¿Cómo harías para imprimir el nombre de los mayores de edad? </li>
+        </ol>
+    </div>
+</body>
+
+</html>
