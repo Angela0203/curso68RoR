@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
-  <%= @usuario.name %>
+  <strong>Nombre:</strong>
+  <%= @usuario.nombre %>
 </p>
 
 <p>
@@ -16,9 +16,9 @@
 </p>
 
 <p>
-  <strong>Contrasena:</strong>
-  <%= @usuario.contrasena %>
+  <strong>Email:</strong>
+  <%= @usuario.email %>
 </p>
 
-<%= link_to 'Edit', edit_usuario_path(@usuario) %> |
-<%= link_to 'Back', usuarios_path %>
+<%= link_to 'Editar', edit_usuario_path(@usuario) %> |
+<%= link_to 'Atras', usuarios_path %>
