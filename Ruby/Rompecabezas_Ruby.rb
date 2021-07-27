@@ -43,7 +43,7 @@ mixAlfabeto(array)
 #Genere un arreglo con 10 números aleatorios entre 55 - 100 y haz que esté en orden (el número más pequeño en la primera posición). 
 #Muestre todos los números del arreglo. Por último, muestre el valor mínimo y el valor máximo del arreglo.
 
-def numeros_aleatorios()
+def numerosAleatorios()
     array=[]
     10.times do
         num = rand(55..100)
@@ -56,12 +56,12 @@ def numeros_aleatorios()
     puts "Número máximo: #{array.max}"
 end
 
-numeros_aleatorios 
+numerosAleatorios 
 
 #Genere una cadena aleatoria de 5 caracteres. (Pista (65+rand(26)).chr devuelve un caracter aleatorio).  
 #Genere un arreglo con 10 cadenas aleatorias de 5 caracteres cada una.
 
-def cadena_aleatoria()
+def cadenaAleatoria()
     cadena=""
     5.times do
         cadena += (65+rand(26)).chr
@@ -70,13 +70,13 @@ def cadena_aleatoria()
     return cadena
 end
 
-def genera_array_cadena(num_cadenas)
+def generaCadena(num_cadenas)
     array=[]
     num_cadenas.times do
-        array.push(cadena_aleatoria)
+        array.push(cadenaAleatoria)
     end
-    p "Cadena generada #{array}"
+    p "Cadena aleatoria #{array}"
 end
 
-genera_array_cadena (1)
-genera_array_cadena (10)
+generaCadena (1)
+generaCadena (10)
